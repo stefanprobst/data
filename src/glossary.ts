@@ -23,6 +23,7 @@ export type ModelDefinitionValue =
   | OneOf<any>
   | ManyOf<any>
   | NestedModelDefinition
+  | Array<NestedModelDefinition>
 
 export type NestedModelDefinition = {
   [propertyName: string]:
@@ -30,6 +31,7 @@ export type NestedModelDefinition = {
     | OneOf<any>
     | ManyOf<any>
     | NestedModelDefinition
+    | Array<NestedModelDefinition>
 }
 
 export type FactoryAPI<Dictionary extends Record<string, any>> = {
